@@ -1,16 +1,26 @@
+"""                                                                      Problem:
+
+In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell);
+you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+Example: (input --> output)
+
+"ATTGC" --> "TAACG"
+"GTAT" --> "CATA"
+
+"""
+
+"""                                                                      Solution:
+
+Create a dictionary to access the complement of each symbol, add the value for the key of every character from dna to s and then return s.
+
+"""
+
 def DNA_strand(dna):
     dicti = {'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G'}
-    l = []
-    l1 = []
-    finalString = '';
+    s = ''
     
-    for i in range(0, len(dna)):
-        l.append(dna[i])
+    for i in dna:
+        s += dicti[i]
         
-    for j in range(0, len(l)):
-        l1.append(dicti[l[j]])
-        
-    for k in range(0, len(l1)):
-        finalString += l1[k]
-    
-    return finalString
+    return s
