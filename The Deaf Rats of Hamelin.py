@@ -27,6 +27,13 @@ Split the string into two by the location of the piper and then delete the white
 and replace them with a rat going the correct direction and then loop through again to clean up the remaining tails. Check if the piper is at the beginning or the end
 of the string before returning the total length divided by two giving the amount of rats that weren't facing the correct direction (the "deaf rats")
 
+This was a rather unelegant solution which I found out after could be solved in one line.
+
+def count_deaf_rats(town):
+    return town.replace(' ', '')[::2].count('O')
+    
+Which is the beneficial part of viewing other solution submissions post-solve.
+
 """
 def count_deaf_rats(t):
     print(t)
