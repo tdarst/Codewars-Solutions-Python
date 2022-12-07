@@ -13,7 +13,7 @@ Copy the list to avoid mutation and then return it after removing the lowest val
 """
 
 def remove_smallest(numbers):
-    a = numbers[:]
-    if a:
-        a.remove(min(a))
-    return a
+    num = numbers[:]
+    if num:
+        num.remove(min(num))
+    return num
